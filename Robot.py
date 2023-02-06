@@ -45,7 +45,7 @@ class Robot:
         for i in range(len(landmarks)):
             d = sqrt((self.x - landmarks[i][0]) ** 2 + (self.y - landmarks[i][1]) ** 2)
             d += random.gauss(0.0, self.sense_len_noise)
-            a = atan2(self.y - landmarks[i][1], self.x - landmarks[i][0]) - self.orientation
+            a = atan2(landmarks[i][1] - self.y, landmarks[i][0] - self.x) - self.orientation
             a += random.gauss(0.0, self.sense_ang_noise)
             Z.append(d)
             Z.append(a % (2*pi))

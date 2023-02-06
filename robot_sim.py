@@ -24,6 +24,7 @@ def correct(measurement):
     # Place your correction code here!
 
 
+
 print("Input data:")
 Z0 = realRobot.sense()
 print(' '.join(['{0:0.1f}'.format(m) for m in Z0]))

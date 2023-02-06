@@ -25,8 +25,8 @@ class Drawin:
     @staticmethod
     def clear(screenHandle):
         screenHandle.fill(Drawin.backgroundColor)
-        horizontalLen = 600 / Drawin.cellSize
-        verticalLen = 400 / Drawin.cellSize
+        horizontalLen = 600 // Drawin.cellSize
+        verticalLen = 400 // Drawin.cellSize
         for hor in range(1, verticalLen):
             pygame.draw.aalines(screenHandle, Drawin.delimiterColor, False,
                                 ((0, Drawin.cellSize * hor - 1), (600, Drawin.cellSize * hor - 1)))
